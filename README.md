@@ -1,9 +1,9 @@
 **A Stroke Prediction Model**
 
 
-This project, a course evaluation requirement for Machine Learning Labs with Python at Data ScienceTech Institute, creates a python machine learning model learned on a select dataset to predict a patient’s stroke status given a set of health, physical and social attributes. The data is derived from the popular stroke dataset and the model is based on scikit-learn machine learning package. 
+This project, a course evaluation requirement for Machine Learning Labs with Python at Data ScienceTech Institute, creates a python machine learning model learned on a select dataset to predict a patient’s stroke status given a set of health, physical and social attributes. The data is derived from the popular stroke dataset, and the model is based on scikit-learn machine learning package. 
 
-Stroke is a medical condition caused by death of brain cells that atrophied due to poor blood flow to the brain arising from a bleeding or flow restriction. The dataset is imbalanced with respect to stroke occurence, which was in the minority class. The Synthetic Minority Over-sampling Technique (SMOTE) is used to reduce the impact of imbalance on model learning and its predictive outputs. 
+Stroke is a medical condition caused by the death of brain cells that atrophied due to poor blood flow to the brain arising from a bleeding or flow restriction. The dataset is imbalanced with respect to stroke occurrence, which was in the minority class. The Synthetic Minority Over-sampling Technique (SMOTE) is used to reduce the impact of data imbalance within the target feature on model learning and its predictive outputs. 
 
 The listed classifiers were evaluated to find a fit with the project's preference for a model with predictive qualities that delivers a balanced perspective in a medical use case.
 * Logistic Regression (LR)
@@ -17,8 +17,7 @@ The metric used to select the preferred classifier was the Matthews Correlation 
 
 **The following are available in this repository:**
 * A jupyter notebook documenting reproducible steps for the project's analysis and approach 
-* A report that provides a summary of the project's methodology and results
-* Sourcefiles to simplify the process of building a docker image for model deployment
+* Source files to simplify the process of building a docker image for model deployment
 * Workflow actions that creates a docker image and saves it in a private AWS repository as part of an automated CI/CD process.
 
 
@@ -27,10 +26,10 @@ The metric used to select the preferred classifier was the Matthews Correlation 
 To use the model, there are several data processing steps you might want to take note of:
 
 * Additional features were derived from from selected variables, in the initial datasets, each with categories based on binned values
-* data processing steps included name change and category remapping for selected variables 
-* Column Transformers were utilised to preprocess categorical variables with one hot encoding and to scale numeric variables with a standard scale
+* Data processing steps included name changes and category remapping for selected variables 
+* Column Transformers were utilised to pre-process categorical variables with one-hot encoding and to scale numeric variables with a quantile scale
 
-These are easily identifiable within the notebook, however, it imposes the requirement that similar preprocessing steps be applied to test data or to ensure novel data have column names and indexes that match what the model expects.
+The steps above are easily identifiable within the notebook and having similar preprocessing steps applied to either test data or to novel data will ensure data inputs match model expectation.
 
 **Improvements or Found a Bug?**
 
